@@ -1,0 +1,21 @@
+---
+- name: "USERCONFIG | Deploying workspace configuration"
+  hosts: localhost
+  vars:
+    dotfiles_users:
+      - "{{ ansible_user_id }}"
+      - "root"
+  roles:
+    - dotfiles
+- name: "USERCONFIG | Deploying workspace configuration"
+  hosts: localhost
+  become: True
+  vars:
+    ohmyzsh_users:
+      - "{{ ansible_user_id }}"
+      - "root"
+    ohmyzsh_themes_repos:
+      - https://github.com/romkatv/powerlevel10k
+  roles:
+    - ohmyzsh
+...

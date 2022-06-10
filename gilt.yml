@@ -1,0 +1,8 @@
+---
+- git: https://github.com/Nani-o/ansible-role-dotfiles.git
+  version: master
+  dst: roles/dotfiles/
+- git: https://github.com/Nani-o/ansible-role-ohmyzsh.git
+  version: master
+  dst: roles/ohmyzsh/
+...
